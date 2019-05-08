@@ -1,4 +1,47 @@
 \section{The Section}
+
+\begin{frame}
+  \frametitle{Mechanism Design}
+
+        \begin{enumerate}
+  \item Let $X$ be a set of types, and $O$ a set of outcomes. 
+        
+        \item Let $T : X \times O \to \mathbb R$ be 
+  a type utility map, specifying utility: 
+                        \begin{enumerate} \item If the player's true type is $t^*$, and outcome 
+                        $o$ is implemented, the player will receive $T(t^*, o)$ utility.
+                        \end{enumerate}
+        \end{enumerate}
+
+  A mechanism designer will publish maps $g : X \to O$, $p : O \to \mathbb R$
+        called the mechanism.
+
+  $g$ specifies which outcome will happen for each possible declared type. 
+  $p$ specifies for each possible outcome, how much utility will be charged to the player.
+        
+  For a player of true type $t^*$, the player will look at the $g$ and $p$, declare a type $x$, 
+        and receieve utility $$ T(t^*, g(x)) - p(g(x)).$$
+
+        Our goal is to classify the mechanisms $(g,p)$ for which the player should always
+        declare their true type $t^*$.
+\end{frame}
+
+\begin{frame}
+        \frametitle{Incentive Compatible}
+        We take a slightly weaker stance in defining incentive compatible.
+        A player could declare a type other than $t^*$, but
+        if they do, they must get the same overall utility as if they declared $t^*$.
+
+        Assuming utility-rationality, the player will be indifferent to declaring their true type 
+        $t^*$ exactly when for all $x \in X$,
+
+        $$T(t^*, g(x)) - p(g(x)) \le T(t^*, g(t^*)) - p(g(t^*)).$$
+\end{frame}
+
+\begin{frame}
+
+\end{frame}
+
 \begin{frame}
   \frametitle{Functional derivative}
   A functional derivative  $\frac{\partial F}{\partial\mathbf{x}}$ is implicitely defined by the equation
